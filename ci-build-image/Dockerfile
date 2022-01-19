@@ -55,4 +55,6 @@ RUN curl --proto '=https' --tlsv1.2 -sSf --output wasm-pack-init https://rustwas
 RUN rm ./rustup ./wasm-pack-init \
     rm -rf /var/lib/apt/lists/*
 
+RUN echo export PATH="$PATH" >> ~/.bashrc
+
 ENTRYPOINT ["bash", "-c"]

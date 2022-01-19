@@ -5,6 +5,8 @@ frontend:
   phases:
     build:
       commands:
+        - echo $PATH
+        - pwd
         - rustc --version
         - cargo --version
         - wasm-pack --version

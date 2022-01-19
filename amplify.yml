@@ -5,7 +5,14 @@ frontend:
   phases:
     build:
       commands:
-        - make build
+        - rustc --version
+        - cargo --version
+        - wasm-pack --version
+        - wasm-pack build --target web -s wasm-amplify-build --release wasm
+        - yarn --cwd webapp
+        - yarn link --cwd wasm/pkg
+        - yarn link --cwd webapp @wasm-amplify-build/wasm
+        - yarn --cwd webapp build
 
   artifacts:
     baseDirectory: webapp/dist

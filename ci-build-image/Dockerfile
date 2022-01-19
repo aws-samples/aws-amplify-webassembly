@@ -54,3 +54,5 @@ RUN curl --proto '=https' --tlsv1.2 -sSf --output wasm-pack-init https://rustwas
 # :: Perform various cleanup tasks.
 RUN rm ./rustup ./wasm-pack-init \
     rm -rf /var/lib/apt/lists/*
+
+ENTRYPOINT ["bash", "-c"]

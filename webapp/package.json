@@ -1,6 +1,8 @@
 {
-  "name": "wasm-webapp",
+  "name": "webapp",
   "version": "0.0.0",
+  "license": "MIT-0",
+  "author": "Richard Neil Ilagan <ilagan@amazon.com>",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -9,8 +11,7 @@
   },
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "@wasm-amplify-builds/wasm": "file:../wasm/pkg"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",

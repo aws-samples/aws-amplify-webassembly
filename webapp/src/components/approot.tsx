@@ -1,5 +1,7 @@
 import { FC } from 'react'
 
+import HomeView from '../views/home'
+
 // :: ---
 
 type AppRootProps = {
@@ -7,7 +9,7 @@ type AppRootProps = {
 }
 
 const AppRoot: FC<AppRootProps> = () => {
-  return <>Hello world.</>
+  return <HomeView />
 }
 
 export default AppRoot

@@ -1,11 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+
+import AppRoot from './components/approot'
+
 import './index.css'
-import App from './App'
+
+// :: ---
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppRoot />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.querySelector('#root')
 )

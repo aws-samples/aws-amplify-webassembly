@@ -1,0 +1,28 @@
+---
+parser: '@typescript-eslint/parser'
+parserOptions:
+  sourceType: module
+  ecmaVersion: 2021
+  ecmaFeatures:
+    jsx: true
+
+env:
+  es2021: true
+  browser: true
+
+extends:
+  - plugin:@typescript-eslint/recommended
+  - plugin:unicorn/recommended
+  - plugin:prettier/recommended
+
+rules:
+  unicorn/no-array-reduce: off
+  unicorn/prefer-module: off
+  unicorn/prefer-node-protocol: off
+
+  unicorn/prevent-abbreviations:
+    - error
+    - replacements:
+        env: false
+        props: false
+        params: false

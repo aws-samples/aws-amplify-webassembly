@@ -1,3 +1,8 @@
+#!
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+#
+
 #    IMPORTANT:
 #
 #    To be able to use a custom container image as a build environment in AWS Amplify,

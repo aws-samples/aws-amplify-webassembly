@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint './src/**/*.{ts,tsx,js,jsx}' -f stylish"
+    "lint": "eslint './**/*.{ts,tsx,js,jsx}' -f stylish"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -22,6 +22,7 @@
     "autoprefixer": "^10.4.2",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-header": "^3.1.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-unicorn": "^40.1.0",
     "postcss": "^8.4.5",

@@ -15,6 +15,9 @@ extends:
   - plugin:unicorn/recommended
   - plugin:prettier/recommended
 
+plugins:
+  - header
+
 rules:
   unicorn/no-array-reduce: off
   unicorn/prefer-module: off
@@ -26,3 +29,7 @@ rules:
         env: false
         props: false
         params: false
+
+  header/header:
+    - 2
+    - .header

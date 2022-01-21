@@ -1,3 +1,7 @@
+/*!
+ * Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * SPDX-License-Identifier: MIT-0
+ */
 mod utils;
 
 use sha2::{Digest,Sha256};

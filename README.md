@@ -60,6 +60,8 @@ You'll need the following tools to use this codebase:
 - [Node.js][nodejs] (with [`yarn`][yarn]) for the webapp component, and
 - [Rust][rust] and [`wasm-pack`][wasm-pack] for the WASM module.
 
+> Note that `wasm-pack` currently requires that you use the `nightly` Rust channel.
+
 Feel free to switch up the webapp and WASM technologies to other tech / frameworks / languages
 that you are more familiar with — the approach demonstrated here is meant to be agnostic.
 

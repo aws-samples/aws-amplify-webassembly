@@ -50,7 +50,7 @@ docker build -t wasm-amplify-build-image ./ci-build-image
 ```
 
 Once you have the build image, you'll need to make it available to AWS Amplify ---
-some common option swould be [Docker Hub][docker-hub] or a public
+some common options would be [Docker Hub][docker-hub] or a public
 [Amazon Elastic Container Registry (ECR)][ecr] repository.
 
 More information on how to do this is in the [ci-build-image README][ci-build-image].
@@ -77,6 +77,8 @@ On your [AWS Amplify Console][amplify-console], create a new app, opting to
    > If this is your first time using AWS Amplify with your git platform, you will need
    > to complete authentication and authorization steps.
 
+   ![Amplify step 01](assets/01_amplify.png)
+
    Click **Next**.
 
 2. In **Configure build settings**, provide an app name.
@@ -88,6 +90,8 @@ On your [AWS Amplify Console][amplify-console], create a new app, opting to
 
    > Your build image should have been uploaded somewhere it can be accessed by
    > AWS Amplify. More info on this is available on the [ci-build-image README][ci-build-image].
+
+   ![Amplify step 02](assets/03_amplify.png)
 
    Click **Next**.
 

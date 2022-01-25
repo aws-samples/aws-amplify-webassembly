@@ -39,6 +39,30 @@ This codebase has three distinct pieces:
 - `/wasm` is the codebase for the WebAssembly module, and
 - `/webapp` is the codebase for the web application.
 
+### :star: TL;DR :star:
+
+All the steps below are bundled together in a [`Makefile`](Makefile), with the common
+commands packaged together.
+
+If you just want to get started as quickly as possible (and provided you have the
+requirements below available on your environment), you can just run the following
+and have it running on your local:
+
+```bash
+make build
+```
+
+### Requirements
+
+You'll need the following tools to use this codebase:
+
+- [`docker`][docker] for the custom build image,
+- [Node.js][nodejs] (with [`yarn`][yarn]) for the webapp component, and
+- [Rust][rust] and [`wasm-pack`][wasm-pack] for the WASM module.
+
+Feel free to switch up the webapp and WASM technologies to other tech / frameworks / languages
+that you are more familiar with — the approach demonstrated here is meant to be agnostic.
+
 ### Preparing the build image
 
 The build image is defined by `ci-build-image/Dockerfile`.
@@ -204,6 +228,7 @@ See [CONTRIBUTING](./CONTRIBUTING.md) for more information.
 This project is licensed under the MIT-0 license.
 
 [ci-build-image]: ./ci-build-image
+[docker]: https://docker.com
 [docker-hub]: https://hub.docker.com
 [ecr]: https://aws.amazon.com/ecr
 [amplify-console]: https://console.aws.amazon.com/amplify/home
@@ -213,7 +238,5 @@ This project is licensed under the MIT-0 license.
 [codecommit]: https://aws.amazon.com/codecommit
 [rust]: https://rust-lang.org
 [wasm-pack]: https://rustwasm.github.io/wasm-pack/
-
-```
-
-```
+[nodejs]: https://nodejs.org
+[yarn]: https://www.npmjs.com/package/yarn

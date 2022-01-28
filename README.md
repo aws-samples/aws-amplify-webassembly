@@ -31,6 +31,19 @@ This codebase uses a monorepo approach, because:
 
 ---
 
+> **Note:**
+>
+> This repository uses the Rust language to create its WebAssembly modules,
+> but you can easily adjust it to use your choice of language and frameworks.
+>
+> Here are some other alternatives you may want to take a look at:
+>
+> - [Emscripten][emscripten] (C/C++)
+> - [Blazor][blazor] (C#)
+> - [AssemblyScript][assemblyscript] (Typescript-like)
+
+---
+
 ## Usage
 
 This codebase has three distinct pieces:
@@ -242,3 +255,6 @@ This project is licensed under the MIT-0 license.
 [wasm-pack]: https://rustwasm.github.io/wasm-pack/
 [nodejs]: https://nodejs.org
 [yarn]: https://www.npmjs.com/package/yarn
+[emscripten]: https://emscripten.org
+[blazor]: https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor
+[assemblyscript]: https://www.assemblyscript.org

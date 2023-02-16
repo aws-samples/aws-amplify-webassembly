@@ -7,6 +7,8 @@
 extern crate wasm_bindgen_test;
 use wasm_bindgen_test::*;
 
+wasm_bindgen_test::wasm_bindgen_test_configure!(run_in_browser);
+
 #[wasm_bindgen_test]
 fn calculates_correct_hash() {
     let input = "hello AWS Amplify".to_string();

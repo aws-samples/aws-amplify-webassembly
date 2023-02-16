@@ -7,11 +7,10 @@ mod utils;
 use sha2::{Digest,Sha256};
 use wasm_bindgen::prelude::*;
 
-// When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
-// allocator.
-#[cfg(feature = "wee_alloc")]
+use lol_alloc::{FreeListAllocator, LockedAllocator};
+
 #[global_allocator]
-static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
+static ALLOC: LockedAllocator<FreeListAllocator> = LockedAllocator::new(FreeListAllocator::new());
 
 // :: ----------------------------------------------------------------------------------
 

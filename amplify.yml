@@ -14,10 +14,6 @@ frontend:
         - rustup target add wasm32-unknown-unknown
         # Instalar wasm-pack
         - npm install -g wasm-pack
-        # Instalar dependencias de Node.js
-        - yarn --cwd webapp
-        - yarn link --cwd wasm/pkg
-        - yarn link --cwd webapp @wasm-amplify-build/wasm
     build:
       commands:
         - export PATH="$PATH:/usr/local/cargo/bin"

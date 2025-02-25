@@ -27,6 +27,7 @@
 #    Make sure to adjust based on your particular needs.
 
 
+
 FROM node:20-slim
 
 LABEL author="ilagan@amazon.com"
@@ -56,7 +57,7 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | \
     chmod -R a+w $RUSTUP_HOME $CARGO_HOME
 
 # Install wasm-pack
-RUN curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+RUN npm install -g wasm-pack
 
 # Set up PATH in bashrc
 RUN echo 'export PATH="$PATH"' >> ~/.bashrc

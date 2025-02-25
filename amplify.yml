@@ -3,8 +3,24 @@ version: 1
 
 frontend:
   phases:
+    preBuild:
+      commands:
+        # Instalar dependencias del sistema
+        - apt-get update
+        - apt-get install -y curl git openssh-client ca-certificates gcc libc6-dev make
+        # Instalar Rust
+        - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path --default-toolchain stable
+        - export PATH="$PATH:$HOME/.cargo/bin"
+        - rustup target add wasm32-unknown-unknown
+        # Instalar wasm-pack
+        - npm install -g wasm-pack
+        # Instalar dependencias de Node.js
+        - yarn --cwd webapp
+        - yarn link --cwd wasm/pkg
+        - yarn link --cwd webapp @wasm-amplify-build/wasm
     build:
       commands:
+        - export PATH="$PATH:$HOME/.cargo/bin"
         - make build
 
   artifacts:

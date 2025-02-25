@@ -9,7 +9,7 @@ frontend:
         - apt-get update
         - apt-get install -y curl git openssh-client ca-certificates gcc libc6-dev make
         # Instalar Rust
-        - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path --default-toolchain stable
+        - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
         - export PATH="$PATH:$HOME/.cargo/bin"
         - rustup target add wasm32-unknown-unknown
         # Instalar wasm-pack

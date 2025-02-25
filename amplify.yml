@@ -11,6 +11,7 @@ frontend:
         # Instalar Rust
         - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
         - export PATH="$PATH:$HOME/.cargo/bin"
+        - . "$HOME/.cargo/env"
         - rustup target add wasm32-unknown-unknown
         # Instalar wasm-pack
         - npm install -g wasm-pack
